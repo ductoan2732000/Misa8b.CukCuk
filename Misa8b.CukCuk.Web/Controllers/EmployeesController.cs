@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Misa8b.CukCuk.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class EmployeesController : ControllerBase
     {

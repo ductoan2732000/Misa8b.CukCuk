@@ -347,7 +347,8 @@ namespace Misa8b.CukCuk.BL
                 return new ActionServiceResult()
                 {
                     Success = true,
-                    Message = $"Xóa thành công nhân viên có mã nhân viên: {dataCode}, Họ và tên: {dataName}.",
+                    Message = Misa.CukCuk.Common.Properties.Resources.DeleteP1 + dataCode +
+                    Misa.CukCuk.Common.Properties.Resources.DeleteP2 + dataName,
                     MisaCode = Enumarations.MisaCode.Success,
                     Data = null
                 };

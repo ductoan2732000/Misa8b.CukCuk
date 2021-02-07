@@ -23,6 +23,8 @@ namespace Misa8b.CukCuk.DL
         }
         /// <summary>
         /// lấy toàn bộ dữ liệu 
+        /// 
+        /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns>danh sách dữ liệu T</returns>

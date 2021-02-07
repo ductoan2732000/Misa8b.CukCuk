@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Misa8b.CukCuk.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
     {
@@ -80,7 +80,11 @@ namespace Misa8b.CukCuk.Web.Controllers
             }
         }
 
-        // POST api/<CustomersController>
+        /// <summary>
+        /// thêm mới khách hàng
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post([FromBody] Customer customer)
         {
@@ -99,8 +103,11 @@ namespace Misa8b.CukCuk.Web.Controllers
                     return NoContent();
             }
         }
-
-        // PUT api/<CustomersController>/5
+        /// <summary>
+        /// sửa dữ liệu khách hàng
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put([FromBody] Customer customer)
         {
@@ -119,8 +126,11 @@ namespace Misa8b.CukCuk.Web.Controllers
                     return NoContent();
             }
         }
-
-        // DELETE api/<CustomersController>/5
+        /// <summary>
+        /// xóa dữ liệu khách hàng
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
         public IActionResult Delete(Guid id)
         {

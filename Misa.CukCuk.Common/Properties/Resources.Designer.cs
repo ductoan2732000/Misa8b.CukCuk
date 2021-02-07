@@ -61,6 +61,24 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Xóa thành công nhân viên có mã nhân viên:.
+        /// </summary>
+        public static string DeleteP1 {
+            get {
+                return ResourceManager.GetString("DeleteP1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to , Họ và tên:.
+        /// </summary>
+        public static string DeleteP2 {
+            get {
+                return ResourceManager.GetString("DeleteP2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mã code bị trùng.
         /// </summary>
         public static string Err_DupCode {
