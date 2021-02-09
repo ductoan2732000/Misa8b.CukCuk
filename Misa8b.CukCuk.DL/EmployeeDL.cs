@@ -14,6 +14,10 @@ namespace Misa8b.CukCuk.DL
     /// </summary>
     public class EmployeeDL: BaseDL<Employee>, IEmployeeDL
     {
+        public EmployeeDL(IStringDb stringDb):base(stringDb)
+        {
+
+        }
         /// <summary>
         /// lấy nhân viên bằng code, tên và số điện thoại
         /// </summary>

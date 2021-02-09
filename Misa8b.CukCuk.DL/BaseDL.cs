@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Misa8b.CukCuk.DL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,12 @@ namespace Misa8b.CukCuk.DL
     /// định nghĩa lớp cha với các hàm cơ bản kết nối với db
     /// </summary>
     /// <typeparam name="DL"></typeparam>
-    public class BaseDL<DL>: DbConnection
+    public class BaseDL<DL>: DbConnectionv1
     {
+        public BaseDL(IStringDb stringDb) : base(stringDb)
+        {
+
+        }
         /// <summary>
         /// kiểm tra trùng mã code
         /// </summary>

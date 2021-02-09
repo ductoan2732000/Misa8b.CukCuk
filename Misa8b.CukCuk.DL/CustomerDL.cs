@@ -11,6 +11,10 @@ namespace Misa8b.CukCuk.DL
 {
     public class CustomerDL:BaseDL<Customer>, ICustomerDL
     {
+        public CustomerDL(IStringDb stringDb): base(stringDb)
+        {
+
+        }
         //public List<Customer> GetDataByOthers(string datacode, string fullname, string phonenumber)
         //{
         //    return this.GetCustomerByOthers<Customer>(datacode, fullname, phonenumber);
