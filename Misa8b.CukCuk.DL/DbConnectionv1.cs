@@ -5,22 +5,28 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using Misa8b.CukCuk.DL.Interfaces;
+using Misa.CukCuk.Common;
 
 namespace Misa8b.CukCuk.DL
 {
     /// <summary>
     /// kết nối với database
     /// </summary>
-    public class DbConnection
+    public class DbConnectionv1
     {
-        //chuỗi kết nối với database 
-        protected string stringConnectionDb = "User Id=nvmanh;Host=103.124.92.43;" +
-                "Database=MS2_29_DucToan_CukCuk;port=3306;password=12345678;Character Set=utf8";
         protected IDbConnection dbConnection;
-        public DbConnection()
+        protected IStringDb _stringDb;
+        public DbConnectionv1(IStringDb stringDb)
         {
-            dbConnection = new MySqlConnection(stringConnectionDb);
+            _stringDb = stringDb;
+
+            dbConnection = new MySqlConnection(_stringDb.getStringDb());
         }
+        //public DbConnectionv1()
+        //{
+        //    dbConnection = new MySqlConnection(_stringDb.getStringDb());
+        //}
         /// <summary>
         /// lấy toàn bộ dữ liệu 
         /// 
@@ -44,7 +50,12 @@ namespace Misa8b.CukCuk.DL
             DynamicParameters dynamicParameters = new DynamicParameters();
             dynamicParameters.Add($"@LimitParam", limit);
             dynamicParameters.Add($"@OffsetParam", ofset);
-            return dbConnection.Query<T>($"Proc_GetEmployeesPagging", dynamicParameters, commandType: CommandType.StoredProcedure).ToList();
+            return dbConnection.Query<T>($"Proc_Get{typeof(T).Name}sPagging", dynamicParameters, commandType: CommandType.StoredProcedure).ToList();
+        }
+        public EmployeeNumber DataNumber<T>()
+        {
+            return (EmployeeNumber)dbConnection.Query<T>($"Proc_Get{typeof(T).Name}Number", commandType: CommandType.StoredProcedure);
+
         }
         /// <summary>
         /// lấy dữ liệu bằng id

@@ -85,6 +85,13 @@ namespace Misa8b.CukCuk.BL
                 MisaCode = Enumarations.MisaCode.Success
             };
         }
+        /*public ActionServiceResult GetNumber()
+        {
+            return new ActionServiceResult()
+            {
+                Data = _employeeDL.
+            }
+        }*/
         /// <summary>
         /// lấy dữ liệu nhân viên bằng phòng ban
         /// </summary>
@@ -355,8 +362,16 @@ namespace Misa8b.CukCuk.BL
             }
 
         }
-        
-
+        public ActionServiceResult EmployeeNumbers()
+        {
+            return new ActionServiceResult()
+            {
+                Success = true,
+                Message = Misa.CukCuk.Common.Properties.Resources.Success_Mesenger + ". ",
+                MisaCode = Enumarations.MisaCode.Success,
+                Data = _employeeDL.EmployeeNumbers()
+            };
+        }
 
     }
 }

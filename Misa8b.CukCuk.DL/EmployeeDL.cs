@@ -14,6 +14,10 @@ namespace Misa8b.CukCuk.DL
     /// </summary>
     public class EmployeeDL: BaseDL<Employee>, IEmployeeDL
     {
+        public EmployeeDL(IStringDb stringDb):base(stringDb)
+        {
+
+        }
         /// <summary>
         /// lấy nhân viên bằng code, tên và số điện thoại
         /// </summary>
@@ -63,6 +67,11 @@ namespace Misa8b.CukCuk.DL
             DynamicParameters dynamicParameters = new DynamicParameters();
             dynamicParameters.Add($"@DepartmentName", dep);
             return dbConnection.Query<Employee>($"Proc_GetEmployeeByDep", dynamicParameters, commandType: CommandType.StoredProcedure).ToList();
+        }
+        public EmployeeNumber EmployeeNumbers()
+        {
+            DynamicParameters dynamicParameters = new DynamicParameters();
+            return dbConnection.Query<EmployeeNumber>($"Proc_GetEmployeeNumber", dynamicParameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
         }
     }
 }

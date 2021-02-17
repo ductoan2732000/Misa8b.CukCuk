@@ -43,11 +43,13 @@ namespace Misa8b.CukCuk.Web
                 // Use the default property (Pascal) casing
                 options.SerializerSettings.ContractResolver = new DefaultContractResolver();
             });
-            //Quy định tầng BL lựa chọn DL để sử dụng
+            //Quy định tầng nghiệp vụ lựa chọn DataLayer để sử dụng
             services.AddScoped<ICustomerDL, CustomerDL>();
             services.AddScoped<ICustomerBL, CustomerBL>();
             services.AddScoped<IEmployeeBL, EmployeeBL>();
             services.AddScoped<IEmployeeDL, EmployeeDL>();
+            services.AddScoped<IStringDb, StringDbV1>();
+            //services.AddScoped<IStringDb, StringDbV2>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
