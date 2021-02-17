@@ -71,5 +71,6 @@ namespace Misa8b.CukCuk.BL.Interfaces
         /// <param name="ofset"></param>
         /// <returns></returns>
         public ActionServiceResult GetAllDataPagging(int limit, int ofset);
+        public ActionServiceResult EmployeeNumbers();
     }
 }

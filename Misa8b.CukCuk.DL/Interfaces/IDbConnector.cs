@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Misa.CukCuk.Common;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,5 +13,6 @@ namespace Misa8b.CukCuk.DL.Interfaces
         public void Insert<T>(T t);
         public void Update<T>(T t);
         public int DeleteData<T>(Guid id);
+        public EmployeeNumber DataNumber<T>();
     }
 }

@@ -68,5 +68,10 @@ namespace Misa8b.CukCuk.DL
             dynamicParameters.Add($"@DepartmentName", dep);
             return dbConnection.Query<Employee>($"Proc_GetEmployeeByDep", dynamicParameters, commandType: CommandType.StoredProcedure).ToList();
         }
+        public EmployeeNumber EmployeeNumbers()
+        {
+            DynamicParameters dynamicParameters = new DynamicParameters();
+            return dbConnection.Query<EmployeeNumber>($"Proc_GetEmployeeNumber", dynamicParameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
+        }
     }
 }

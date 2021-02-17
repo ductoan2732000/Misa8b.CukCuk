@@ -50,7 +50,12 @@ namespace Misa8b.CukCuk.DL
             DynamicParameters dynamicParameters = new DynamicParameters();
             dynamicParameters.Add($"@LimitParam", limit);
             dynamicParameters.Add($"@OffsetParam", ofset);
-            return dbConnection.Query<T>($"Proc_GetEmployeesPagging", dynamicParameters, commandType: CommandType.StoredProcedure).ToList();
+            return dbConnection.Query<T>($"Proc_Get{typeof(T).Name}sPagging", dynamicParameters, commandType: CommandType.StoredProcedure).ToList();
+        }
+        public EmployeeNumber DataNumber<T>()
+        {
+            return (EmployeeNumber)dbConnection.Query<T>($"Proc_Get{typeof(T).Name}Number", commandType: CommandType.StoredProcedure);
+
         }
         /// <summary>
         /// lấy dữ liệu bằng id

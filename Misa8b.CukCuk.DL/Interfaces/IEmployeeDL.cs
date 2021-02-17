@@ -34,6 +34,6 @@ namespace Misa8b.CukCuk.DL.Interfaces
         /// <param name="posi"></param>
         /// <returns>danh sách phòng ban</returns>
         public List<Employee> GetEmployeeByDep(string posi);
-
+        public EmployeeNumber EmployeeNumbers();
     }
 }
