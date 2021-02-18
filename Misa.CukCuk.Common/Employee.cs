@@ -95,6 +95,33 @@ namespace Misa.CukCuk.Common
         /// Tên phòng ban nhân viên đang làm việc
         /// </summary>
         public string DepartmentName { get; set; }
-
+        /// <summary>
+        /// Tên chức danh của nhân viên
+        /// </summary>
+        public string Title { get; set; }
+        /// <summary>
+        /// Chi nhánh của nhân viên
+        /// </summary>
+        public string Branch { get; set; }
+        /// <summary>
+        /// mã id của ngân hàng 
+        /// </summary>
+        public Guid BankID { get; set; }
+        /// <summary>
+        /// số tài khoản ngân hàng
+        /// </summary>
+        public string BankCode { get; set; }
+        /// <summary>
+        /// tên tài khoản ngân hàng
+        /// </summary>
+        public string BankName { get; set; }
+        /// <summary>
+        /// chi nhánh ngân hàng
+        /// </summary>
+        public string BankBranch { get; set; }
+        /// <summary>
+        /// thành phố ngân hàng
+        /// </summary>
+        public string BankLocation { get; set; }
     }
 }
