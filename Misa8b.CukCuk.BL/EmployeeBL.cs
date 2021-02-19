@@ -131,29 +131,29 @@ namespace Misa8b.CukCuk.BL
                 mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyName + ". ";
             }
             // kiểm tra số điện thoại
-            if (data.PhoneNumber.Trim() == string.Empty)
-            {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyPhoneNumber + ". ";
-            }
-            else if (_employeeDL.CheckDuplicateDataPhoneNumber(data.PhoneNumber) == true)
-            {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_DupPhoneNumber + ". ";
-            }
+            //if (data.PhoneNumber.Trim() == string.Empty)
+            //{
+            //    mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyPhoneNumber + ". ";
+            //}
+            //else if (_employeeDL.CheckDuplicateDataPhoneNumber(data.PhoneNumber) == true)
+            //{
+            //    mesage += Misa.CukCuk.Common.Properties.Resources.Err_DupPhoneNumber + ". ";
+            //}
             //Kiểm tra Email đã nhập chưa 
-            if (data.Email.Trim() == string.Empty)
-            {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyEmail + ". ";
-            }
+            //if (data.Email.Trim() == string.Empty)
+            //{
+            //    mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyEmail + ". ";
+            //}
             //Kiểm tra CMND đã nhập chưa hay bị trùng
-            if (data.IdentityCard.Trim() == string.Empty)
-            {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyIdent + ". ";
+            //if (data.IdentityCard.Trim() == string.Empty)
+            //{
+            //    mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyIdent + ". ";
 
-            }
-            else if (_employeeDL.CheckDuplicateIdent(data.IdentityCard) == true)
-            {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_DupIdent + ". ";
-            }
+            //}
+            //else if (_employeeDL.CheckDuplicateIdent(data.IdentityCard) == true)
+            //{
+            //    mesage += Misa.CukCuk.Common.Properties.Resources.Err_DupIdent + ". ";
+            //}
             if (mesage == "")
             {
                 _employeeDL.InsertData(data);

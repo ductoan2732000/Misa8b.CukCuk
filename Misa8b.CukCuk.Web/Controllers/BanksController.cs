@@ -1,4 +1,4 @@
-﻿    using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Misa8b.CukCuk.BL.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -11,18 +11,18 @@ namespace Misa8b.CukCuk.Web.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class DepartmentsController : ControllerBase
+    public class BanksController : ControllerBase
     {
-        IDepartmentBL _departmentBL;
-        public DepartmentsController(IDepartmentBL departmentBL)
+        IBankBL _bankBL;
+        public BanksController(IBankBL bankBL)
         {
-            _departmentBL = departmentBL;
+            _bankBL = bankBL;
         }
-        // GET: api/<DepartmentsController>
+        // GET: api/<BanksController>
         [HttpGet]
         public IActionResult Get()
         {
-            var datas = _departmentBL.GetAllData();
+            var datas = _bankBL.GetAllData();
             switch (datas.MisaCode)
             {
                 case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Success:
@@ -38,26 +38,26 @@ namespace Misa8b.CukCuk.Web.Controllers
             }
         }
 
-        // GET api/<DepartmentsController>/5
+        // GET api/<BanksController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<DepartmentsController>
+        // POST api/<BanksController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<DepartmentsController>/5
+        // PUT api/<BanksController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<DepartmentsController>/5
+        // DELETE api/<BanksController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

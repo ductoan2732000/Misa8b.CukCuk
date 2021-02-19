@@ -50,6 +50,8 @@ namespace Misa8b.CukCuk.Web
             services.AddScoped<IEmployeeDL, EmployeeDL>();
             services.AddScoped<IDepartmentBL, DepartmentBL>();
             services.AddScoped<IDepartmentDL, DepartmentDL>();
+            services.AddScoped<IBankBL, BankBL>();
+            services.AddScoped<IBankDL, BankDL>();
             services.AddScoped<IStringDb, StringDbV1>();
             //services.AddScoped<IStringDb, StringDbV2>();
         }
