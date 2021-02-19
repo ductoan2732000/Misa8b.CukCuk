@@ -61,6 +61,15 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Xóa thành công tài khoản ngân hàng có mã: .
+        /// </summary>
+        public static string DeleteBank {
+            get {
+                return ResourceManager.GetString("DeleteBank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Xóa thành công nhân viên có mã nhân viên:.
         /// </summary>
         public static string DeleteP1 {
