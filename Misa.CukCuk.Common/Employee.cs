@@ -106,7 +106,7 @@ namespace Misa.CukCuk.Common
         /// <summary>
         /// mã id của ngân hàng 
         /// </summary>
-        public Guid BankID { get; set; }
+        //public string BankID { get; set; }
         /// <summary>
         /// số tài khoản ngân hàng
         /// </summary>
@@ -123,5 +123,7 @@ namespace Misa.CukCuk.Common
         /// thành phố ngân hàng
         /// </summary>
         public string BankLocation { get; set; }
+        public string PhoneLandline { get; set; }
+        public string Address { get; set; }
     }
 }
