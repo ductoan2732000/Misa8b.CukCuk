@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Misa.CukCuk.Common;
 using Misa8b.CukCuk.BL.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -39,28 +40,89 @@ namespace Misa8b.CukCuk.Web.Controllers
         }
 
         // GET api/<BanksController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("id")]
+        public IActionResult Get(Guid id)
         {
-            return "value";
+            var data = _bankBL.GetDataById(id);
+            switch (data.MisaCode)
+            {
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Success:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Validate:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Error:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Exception:
+                    return Ok(data);
+                default:
+                    return NoContent();
+            }
+        }
+        [HttpGet("EmployeeId")]
+        public IActionResult GetBankByEmployeeId(Guid id)
+        {
+            var data = _bankBL.GetBankByEmployeeId(id);
+            switch (data.MisaCode)
+            {
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Success:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Validate:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Error:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Exception:
+                    return Ok(data);
+                default:
+                    return NoContent();
+            }
         }
 
         // POST api/<BanksController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] Bank bank)
         {
+            var data = _bankBL.InsertData(bank);
+            return Ok(data);
         }
 
         // PUT api/<BanksController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public IActionResult Put([FromBody] Bank bank)
         {
+            var data = _bankBL.UpdateData(bank);
+            switch (data.MisaCode)
+            {
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Success:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Validate:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Error:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Exception:
+                    return Ok(data);
+                default:
+                    return NoContent();
+            }
         }
 
         // DELETE api/<BanksController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete]
+        public IActionResult Delete(Guid id)
         {
+            var data = _bankBL.DeleteBank(id);
+            switch (data.MisaCode)
+            {
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Success:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Validate:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Error:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Exception:
+                    return Ok(data);
+                default:
+                    return NoContent();
+            }
         }
     }
 }

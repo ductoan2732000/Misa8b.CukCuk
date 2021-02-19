@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DeleteBank" xml:space="preserve">
+    <value>Xóa thành công tài khoản ngân hàng có mã: </value>
+  </data>
   <data name="DeleteP1" xml:space="preserve">
     <value>Xóa thành công nhân viên có mã nhân viên:</value>
   </data>

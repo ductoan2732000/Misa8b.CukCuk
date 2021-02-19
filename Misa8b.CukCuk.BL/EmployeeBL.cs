@@ -337,9 +337,7 @@ namespace Misa8b.CukCuk.BL
         /// <returns></returns>
         public ActionServiceResult DeleteEmployee(Guid id)
         {
-            Employee data = _employeeDL.GetDataId(id);
-            var dataCode = data.EmployeeCode;
-            var dataName = data.FullName;
+            
             if (_employeeDL.CheckDuplicateDataId(id) == false)
                 return new ActionServiceResult()
                 {
@@ -350,6 +348,9 @@ namespace Misa8b.CukCuk.BL
                 };
             else
             {
+                Employee data = _employeeDL.GetDataId(id);
+                var dataCode = data.EmployeeCode;
+                var dataName = data.FullName;
                 _employeeDL.DeleteData(id);
                 return new ActionServiceResult()
                 {
