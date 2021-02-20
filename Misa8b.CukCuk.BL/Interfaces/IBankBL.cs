@@ -12,6 +12,7 @@ namespace Misa8b.CukCuk.BL.Interfaces
         public ActionServiceResult InsertData(Bank bank);
         public ActionServiceResult GetDataById(Guid id);
         public ActionServiceResult GetBankByEmployeeId(Guid employeeId);
+        public ActionServiceResult DeleteBankByEmployeeId(Guid employeeId);
         public ActionServiceResult UpdateData(Bank bank);
         public ActionServiceResult DeleteBank(Guid id);
     }
