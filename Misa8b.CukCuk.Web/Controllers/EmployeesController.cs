@@ -260,9 +260,10 @@ namespace Misa8b.CukCuk.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete]
-        public IActionResult Delete(Guid id)
+        public IActionResult Delete([FromQuery] string id)
         {
-            var data = _employeeBL.DeleteEmployee(id);
+            Guid idTemp = new Guid(id);
+            var data = _employeeBL.DeleteEmployee(idTemp);
             switch (data.MisaCode)
             {
                 case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Success:

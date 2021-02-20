@@ -43,6 +43,17 @@ namespace Misa8b.CukCuk.BL
             }
         }
 
+        public ActionServiceResult DeleteBankByEmployeeId(Guid employeeId)
+        {
+            return new ActionServiceResult()
+            {
+                Data = _bankDL.DeleteBankByEmployeeId(employeeId),
+                Success = true,
+                Message = Misa.CukCuk.Common.Properties.Resources.Success_Mesenger + ". ",
+                MisaCode = Enumarations.MisaCode.Success
+            };
+        }
+
         public ActionServiceResult GetAllData()
         {
             return new ActionServiceResult()

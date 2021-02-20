@@ -124,5 +124,23 @@ namespace Misa8b.CukCuk.Web.Controllers
                     return NoContent();
             }
         }
+        [HttpDelete("id")]
+        public IActionResult DeleteDataById(Guid id)
+        {
+            var data = _bankBL.DeleteBankByEmployeeId(id);
+            switch (data.MisaCode)
+            {
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Success:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Validate:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Error:
+                    return Ok(data);
+                case Misa.CukCuk.Common.Enum.Enumarations.MisaCode.Exception:
+                    return Ok(data);
+                default:
+                    return NoContent();
+            }
+        }
     }
 }
