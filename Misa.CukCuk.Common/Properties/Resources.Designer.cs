@@ -88,7 +88,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mã code bị trùng.
+        ///   Looks up a localized string similar to Mã code bị trùng..
         /// </summary>
         public static string Err_DupCode {
             get {
@@ -97,7 +97,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Số CMND bị trùng.
+        ///   Looks up a localized string similar to Số CMND bị trùng..
         /// </summary>
         public static string Err_DupIdent {
             get {
@@ -106,7 +106,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Số điện thoại bị trùng.
+        ///   Looks up a localized string similar to Số điện thoại bị trùng..
         /// </summary>
         public static string Err_DupPhoneNumber {
             get {
@@ -115,7 +115,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quý khách phải nhập mã code.
+        ///   Looks up a localized string similar to Quý khách phải nhập mã code..
         /// </summary>
         public static string Err_EmptyCode {
             get {
@@ -124,7 +124,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Qúy khách phải nhập Email.
+        ///   Looks up a localized string similar to Qúy khách phải nhập Email..
         /// </summary>
         public static string Err_EmptyEmail {
             get {
@@ -133,7 +133,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quý khách phải nhập số CMND.
+        ///   Looks up a localized string similar to Quý khách phải nhập số CMND..
         /// </summary>
         public static string Err_EmptyIdent {
             get {
@@ -142,7 +142,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Không có bản nào trùng đoạn code này.
+        ///   Looks up a localized string similar to Không có bản nào trùng đoạn code này..
         /// </summary>
         public static string Err_EmptyListCode {
             get {
@@ -151,7 +151,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Không có bản nào trùng đoạn tên này.
+        ///   Looks up a localized string similar to Không có bản nào trùng đoạn tên này..
         /// </summary>
         public static string Err_EmptyListName {
             get {
@@ -160,7 +160,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Không có bản nào trùng đoạn số điện thoại này.
+        ///   Looks up a localized string similar to Không có bản nào trùng đoạn số điện thoại này..
         /// </summary>
         public static string Err_EmptyListPhoneNumber {
             get {
@@ -169,7 +169,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quý khách phải nhập tên đầy đủ.
+        ///   Looks up a localized string similar to Quý khách phải nhập tên đầy đủ..
         /// </summary>
         public static string Err_EmptyName {
             get {
@@ -178,7 +178,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quý khách phải nhập số điện thoại.
+        ///   Looks up a localized string similar to Quý khách phải nhập số điện thoại..
         /// </summary>
         public static string Err_EmptyPhoneNumber {
             get {
@@ -187,7 +187,16 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Không có bản nào có mã Id như vậy.
+        ///   Looks up a localized string similar to Qúy khách phải nhập vị trí phòng ban..
+        /// </summary>
+        public static string Err_NotDepartmentId {
+            get {
+                return ResourceManager.GetString("Err_NotDepartmentId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Không có bản nào có mã Id như vậy..
         /// </summary>
         public static string Err_NotDupId {
             get {
@@ -196,7 +205,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Không có bản ghi nào có Id như vậy trong hệ thống.
+        ///   Looks up a localized string similar to Không có bản ghi nào có Id như vậy trong hệ thống..
         /// </summary>
         public static string Err_NotId {
             get {
@@ -205,7 +214,7 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Không có bản ghi nào có mã, họ tên và số điện thoại trùng chuỗi quý khách đã nhập.
+        ///   Looks up a localized string similar to Không có bản ghi nào có mã, họ tên và số điện thoại trùng chuỗi quý khách đã nhập..
         /// </summary>
         public static string Err_SearchData {
             get {
@@ -214,7 +223,16 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thành công.
+        ///   Looks up a localized string similar to (Lỗi thêm)..
+        /// </summary>
+        public static string ResultsInsert {
+            get {
+                return ResourceManager.GetString("ResultsInsert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thành công..
         /// </summary>
         public static string Success_Mesenger {
             get {

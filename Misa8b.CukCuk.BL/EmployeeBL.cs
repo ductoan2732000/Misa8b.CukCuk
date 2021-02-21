@@ -118,17 +118,21 @@ namespace Misa8b.CukCuk.BL
             // 1. Kiểm tra trùng mã code
             if (data.EmployeeCode.Trim() == string.Empty)
             {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyCode + ". ";
+                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyCode;
             }
             else if (_employeeDL.CheckDuplicateDataCode(data.EmployeeCode) == true)
             {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_DupCode + ". ";
+                mesage += Misa.CukCuk.Common.Properties.Resources.Err_DupCode;
             }
             // 2. kiểm tra họ tên phải nhập
 
             if (data.FullName.Trim() == string.Empty)
             {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyName + ". ";
+                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyName;
+            }
+            if (data.DepartmentId.ToString() == "00000000-0000-0000-0000-000000000000")
+            {
+                mesage += Misa.CukCuk.Common.Properties.Resources.Err_NotDepartmentId;
             }
             // kiểm tra số điện thoại
             //if (data.PhoneNumber.Trim() == string.Empty)
@@ -154,13 +158,14 @@ namespace Misa8b.CukCuk.BL
             //{
             //    mesage += Misa.CukCuk.Common.Properties.Resources.Err_DupIdent + ". ";
             //}
+
             if (mesage == "")
             {
                 _employeeDL.InsertData(data);
                 return new ActionServiceResult()
                 {
                     Success = true,
-                    Message = Misa.CukCuk.Common.Properties.Resources.Success_Mesenger + ". ",
+                    Message = Misa.CukCuk.Common.Properties.Resources.Success_Mesenger,
                     MisaCode = Enumarations.MisaCode.Success,
                     Data = null
                 };
@@ -168,7 +173,7 @@ namespace Misa8b.CukCuk.BL
             else return new ActionServiceResult()
             {
                 Success = false,
-                Message = mesage,
+                Message = mesage + Misa.CukCuk.Common.Properties.Resources.ResultsInsert,
                 MisaCode = Enumarations.MisaCode.Validate,
                 Data = null
             };

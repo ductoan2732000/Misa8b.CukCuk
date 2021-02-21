@@ -127,48 +127,54 @@
     <value>, Họ và tên:</value>
   </data>
   <data name="Err_DupCode" xml:space="preserve">
-    <value>Mã code bị trùng</value>
+    <value>Mã code bị trùng.</value>
   </data>
   <data name="Err_DupIdent" xml:space="preserve">
-    <value>Số CMND bị trùng</value>
+    <value>Số CMND bị trùng.</value>
   </data>
   <data name="Err_DupPhoneNumber" xml:space="preserve">
-    <value>Số điện thoại bị trùng</value>
+    <value>Số điện thoại bị trùng.</value>
   </data>
   <data name="Err_EmptyCode" xml:space="preserve">
-    <value>Quý khách phải nhập mã code</value>
+    <value>Quý khách phải nhập mã code.</value>
   </data>
   <data name="Err_EmptyEmail" xml:space="preserve">
-    <value>Qúy khách phải nhập Email</value>
+    <value>Qúy khách phải nhập Email.</value>
   </data>
   <data name="Err_EmptyIdent" xml:space="preserve">
-    <value>Quý khách phải nhập số CMND</value>
+    <value>Quý khách phải nhập số CMND.</value>
   </data>
   <data name="Err_EmptyListCode" xml:space="preserve">
-    <value>Không có bản nào trùng đoạn code này</value>
+    <value>Không có bản nào trùng đoạn code này.</value>
   </data>
   <data name="Err_EmptyListName" xml:space="preserve">
-    <value>Không có bản nào trùng đoạn tên này</value>
+    <value>Không có bản nào trùng đoạn tên này.</value>
   </data>
   <data name="Err_EmptyListPhoneNumber" xml:space="preserve">
-    <value>Không có bản nào trùng đoạn số điện thoại này</value>
+    <value>Không có bản nào trùng đoạn số điện thoại này.</value>
   </data>
   <data name="Err_EmptyName" xml:space="preserve">
-    <value>Quý khách phải nhập tên đầy đủ</value>
+    <value>Quý khách phải nhập tên đầy đủ.</value>
   </data>
   <data name="Err_EmptyPhoneNumber" xml:space="preserve">
-    <value>Quý khách phải nhập số điện thoại</value>
+    <value>Quý khách phải nhập số điện thoại.</value>
+  </data>
+  <data name="Err_NotDepartmentId" xml:space="preserve">
+    <value>Qúy khách phải nhập vị trí phòng ban.</value>
   </data>
   <data name="Err_NotDupId" xml:space="preserve">
-    <value>Không có bản nào có mã Id như vậy</value>
+    <value>Không có bản nào có mã Id như vậy.</value>
   </data>
   <data name="Err_NotId" xml:space="preserve">
-    <value>Không có bản ghi nào có Id như vậy trong hệ thống</value>
+    <value>Không có bản ghi nào có Id như vậy trong hệ thống.</value>
   </data>
   <data name="Err_SearchData" xml:space="preserve">
-    <value>Không có bản ghi nào có mã, họ tên và số điện thoại trùng chuỗi quý khách đã nhập</value>
+    <value>Không có bản ghi nào có mã, họ tên và số điện thoại trùng chuỗi quý khách đã nhập.</value>
+  </data>
+  <data name="ResultsInsert" xml:space="preserve">
+    <value>(Lỗi thêm).</value>
   </data>
   <data name="Success_Mesenger" xml:space="preserve">
-    <value>Thành công</value>
+    <value>Thành công.</value>
   </data>
 </root>
