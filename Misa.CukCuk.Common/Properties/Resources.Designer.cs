@@ -223,11 +223,38 @@ namespace Misa.CukCuk.Common.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (Thêm thành công)..
+        /// </summary>
+        public static string OkInsert {
+            get {
+                return ResourceManager.GetString("OkInsert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Sửa thành công)..
+        /// </summary>
+        public static string OkUpdate {
+            get {
+                return ResourceManager.GetString("OkUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to (Lỗi thêm)..
         /// </summary>
         public static string ResultsInsert {
             get {
                 return ResourceManager.GetString("ResultsInsert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Lỗi cập nhật)..
+        /// </summary>
+        public static string ResultsUpdate {
+            get {
+                return ResourceManager.GetString("ResultsUpdate", resourceCulture);
             }
         }
         

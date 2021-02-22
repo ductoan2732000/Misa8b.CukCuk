@@ -165,7 +165,8 @@ namespace Misa8b.CukCuk.BL
                 return new ActionServiceResult()
                 {
                     Success = true,
-                    Message = Misa.CukCuk.Common.Properties.Resources.Success_Mesenger,
+                    Message = Misa.CukCuk.Common.Properties.Resources.Success_Mesenger
+                    + Misa.CukCuk.Common.Properties.Resources.OkInsert,
                     MisaCode = Enumarations.MisaCode.Success,
                     Data = null
                 };
@@ -280,17 +281,17 @@ namespace Misa8b.CukCuk.BL
             // 1. Kiểm tra trùng mã code
             if (data.EmployeeCode.Trim() == string.Empty)
             {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyCode + ". ";
+                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyCode;
             }
             else if (data.EmployeeCode != tempData.EmployeeCode && _employeeDL.CheckDuplicateDataCode(data.EmployeeCode) == true)
             {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_DupCode + ". ";
+                mesage += Misa.CukCuk.Common.Properties.Resources.Err_DupCode;
             }
             // 2. kiểm tra họ tên bị trùng
 
             if (data.FullName.Trim() == string.Empty)
             {
-                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyName + ". ";
+                mesage += Misa.CukCuk.Common.Properties.Resources.Err_EmptyName;
             }
             // kiểm tra số điện thoại
             //if (data.PhoneNumber.Trim() == string.Empty)
@@ -322,7 +323,8 @@ namespace Misa8b.CukCuk.BL
                 return new ActionServiceResult()
                 {
                     Success = true,
-                    Message = Misa.CukCuk.Common.Properties.Resources.Success_Mesenger + ". ",
+                    Message = Misa.CukCuk.Common.Properties.Resources.Success_Mesenger
+                    + Misa.CukCuk.Common.Properties.Resources.OkUpdate,
                     MisaCode = Enumarations.MisaCode.Success,
                     Data = null
                 };
@@ -330,7 +332,7 @@ namespace Misa8b.CukCuk.BL
             else return new ActionServiceResult()
             {
                 Success = false,
-                Message = mesage,
+                Message = mesage + Misa.CukCuk.Common.Properties.Resources.ResultsUpdate,
                 MisaCode = Enumarations.MisaCode.Validate,
                 Data = null
             };
