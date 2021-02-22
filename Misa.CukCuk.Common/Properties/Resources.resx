@@ -171,8 +171,17 @@
   <data name="Err_SearchData" xml:space="preserve">
     <value>Không có bản ghi nào có mã, họ tên và số điện thoại trùng chuỗi quý khách đã nhập.</value>
   </data>
+  <data name="OkInsert" xml:space="preserve">
+    <value>(Thêm thành công).</value>
+  </data>
+  <data name="OkUpdate" xml:space="preserve">
+    <value>(Sửa thành công).</value>
+  </data>
   <data name="ResultsInsert" xml:space="preserve">
     <value>(Lỗi thêm).</value>
+  </data>
+  <data name="ResultsUpdate" xml:space="preserve">
+    <value>(Lỗi cập nhật).</value>
   </data>
   <data name="Success_Mesenger" xml:space="preserve">
     <value>Thành công.</value>
